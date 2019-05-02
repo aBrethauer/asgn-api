@@ -7,11 +7,17 @@ const PORT = process.env.PORT  || 3000 //Establishes port to listen on
 var app = express();
 app.use(bodyParser.json())// enables body parser for JSON
 
+
+//DB connection
+var mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost:27017/asgn-api');
+
+
 //Routers
 var asgnRouter = require('./routes/asgn-router');
 
 
-//Routes
+//Routes *****TODO - Why can't I use param /asgn-api?******
 app.use(asgnRouter);
 
 app.use((req,res) => {

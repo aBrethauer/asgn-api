@@ -18,8 +18,8 @@ mongoose.connect('mongodb://localhost:27017/asgn-api');
 var asgnRouter = require('./routes/asgn-router');
 
 
-//Routes *****TODO - Why can't I use param /asgn-api?******
-app.use(asgnRouter);
+//Routes 
+app.use('/asgn-api', asgnRouter);
 
 app.use((req,res) => {
     res.status(404).send('Page not found.');

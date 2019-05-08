@@ -5,24 +5,24 @@ var assignment = require('../models/asgn-model');
 
 //list
 exports.listAsgn = function(req, res){
-    return res.send(`Listasgn works!`);
+ return res.send('Listasgn works!');
 }
-//create
+//create - POST
 exports.addAsgn = function (req, res) {
-    return res.send(`Addasgn works!`);
+   return res.send(`AddAssn works.`)    
 }
-//retrieve
+//retrieve - GET
 exports.showAsgn = function(req, res){
     return res.send(`Showasgn works!`);
 }
 
-//update
+//update - PUT
 exports.changeAsgn = function(req, res){
     return res.send(`changeasgn works!`);
 }
 
-//delete
+//delete - DELETE
 
 exports.deleteAsgn = function(req, res){
-    res.send('deleteAsgn');
+    return res.send('deleteAsgn');
 }
